@@ -10,7 +10,8 @@ function makeGrid() {
     const inputHeight = document.getElementById('inputHeight');
     const inputWidth = document.getElementById('inputWidth');
     const pixelCanvas = document.getElementById('pixelCanvas');
-    const getColor = document.getElementById('colorPicker')
+    const getColor = document.getElementById('colorPicker');
+    const fragment = document.createDocumentFragment()
 
     submitButton.addEventListener('click',(event)=>{
         console.log(event.eventPhase)
@@ -24,8 +25,10 @@ function makeGrid() {
                 creaetTr.appendChild(tdList)
                 console.log('inputWidth.value',inputWidth.value)
             }
-        pixelCanvas.appendChild(creaetTr)
+            fragment.appendChild(creaetTr)
         }
+        pixelCanvas.appendChild(fragment)
+
         console.log(event.target)
 
     })
