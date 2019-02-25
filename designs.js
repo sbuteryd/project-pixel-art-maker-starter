@@ -31,7 +31,7 @@ function makeGrid() {
     })
     pixelCanvas.addEventListener('click',function (event) {
        if(event.target.nodeName === 'TD'){
-           console.log(event.target.style.backgroundColor = 'red')
+           console.log(event.target.style.backgroundColor = getColor.value)
        }
     })
 
