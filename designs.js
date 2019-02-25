@@ -13,6 +13,7 @@ function makeGrid() {
     const getColor = document.getElementById('colorPicker')
 
     submitButton.addEventListener('click',(event)=>{
+        console.log(event.eventPhase)
         let creaetTr;
         let tdList ;
             event.preventDefault();
@@ -25,8 +26,15 @@ function makeGrid() {
             }
         pixelCanvas.appendChild(creaetTr)
         }
+        console.log(event.target)
 
     })
+    pixelCanvas.addEventListener('click',function (event) {
+       if(event.target.nodeName === 'TD'){
+           console.log(event.target.style.backgroundColor = 'red')
+       }
+    })
+
 }
 
 makeGrid()
