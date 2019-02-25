@@ -6,5 +6,12 @@
 function makeGrid() {
 
 // Your code goes here!
+    const submitButton = document.getElementById('sizePicker')
+
+    submitButton.addEventListener('click',(event)=>{
+        event.preventDefault()
+    })
 
 }
+
+makeGrid()
